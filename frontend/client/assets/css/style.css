@@ -34,6 +34,7 @@
 
 -----------------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -63,7 +64,7 @@ body {
   font-style: normal;
   font-weight: 400;
   visibility: visible;
-  font-family: "Rubik", sans-serif;
+  font-family: "Reddit Sans", sans-serif;
   color: #363f4d;
 }
 
