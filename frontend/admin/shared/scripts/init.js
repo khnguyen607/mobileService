@@ -18,8 +18,8 @@ async function _getLayouts() {
 }
 
 async function _authenticationLayout() {
-    var check = await Helper.getCookie('user_id')
-    if (!check || check == "0") {
+    var check = await Helper.fetchData('user&action=find&id=' + Helper.getCookie('user_id'))
+    if (!check || check.Role == "0") {
         location.href = "./login.html"
     }
 }

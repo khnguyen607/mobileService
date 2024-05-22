@@ -18,10 +18,9 @@ async function defaultFunc() {
                     fetch(Helper.backendLink + '?controller=blog&action=find&id=' + edit)
                         .then(response => response.json())
                         .then(async data => {
-                            console.log(data);
                             document.querySelector('input[name="Name"]').value = data.Name
                             document.querySelector('input[name="Subtitle"]').value = data.Subtitle
-                            document.querySelector('.ck-content p').innerHTML = data.Content
+                            window.editor.setData(data.Content);
 
                             var categories = await Helper.fetchData('blog&action=getCategories&id=' + edit)
                             categories.forEach(category => {

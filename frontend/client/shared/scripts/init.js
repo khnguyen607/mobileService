@@ -25,10 +25,11 @@ async function _getLayouts() {
 }
 
 async function _authenticationLayout() {
-    var checkUser = Helper.getCookie('user_id')
+    var checkUser = await Helper.fetchData('user&action=find&id=' + Helper.getCookie('user_id'))
+
     if (checkUser) {
         document.querySelector(".top_right .header_account ul").innerHTML = `
-            <li class="top_links"><a href="#"><i class="fa fa-user"></i> Xin chào, Nguyên <i
+            <li class="top_links"><a href="#"><i class="fa fa-user"></i> Xin chào, ${checkUser.Name} <i
                 class="ion-chevron-down"></i></a>
                 <ul class="dropdown_links">
                     <li><a href="javascript:void(0);">Đăng xuất</a></li>
