@@ -14,6 +14,7 @@ async function showDatas(items) {
     var dataItem = dataList.querySelector(".dataItem").cloneNode(true)
     dataList.innerHTML = ""
     await items.forEach(item => {
+        if (item.Role == 2) return
         let cloneData = dataItem.cloneNode(true)
 
         cloneData.querySelector("._userName").textContent = item.Name

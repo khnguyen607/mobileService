@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preschool.dreamguystech.com/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 24 Sep 2023 09:12:37 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
@@ -80,7 +78,7 @@
                                 <p class="text-muted mb-0">Admin</p>
                             </div>
                         </div>
-                        <a class="dropdown-item" href="login.html">Đăng xuất</a>
+                        <a class="dropdown-item" href="login.html" onclick="Helper.fetchData('user&action=logout')">Đăng xuất</a>
                     </div>
                 </li>
 
@@ -143,7 +141,5 @@
 
     <script src="assets/js/script.js"></script>
 </body>
-
-<!-- Mirrored from preschool.dreamguystech.com/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 24 Sep 2023 09:13:14 GMT -->
 
 </html>

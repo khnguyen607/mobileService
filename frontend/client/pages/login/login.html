@@ -16,13 +16,12 @@
     </div>
     <!--breadcrumbs area end-->
 
-    <!-- customer login start -->
     <div class="customer_login mt-45">
         <div class="container">
-            <div class="row">
-                <!--login area start-->
-                <div class="col-lg-6 col-md-6">
-                    <div class="account_form login">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    <!-- Login Form -->
+                    <div class="account_form login" id="login-form">
                         <h2>Đăng nhập</h2>
                         <form action="#">
                             <p>
@@ -34,23 +33,19 @@
                                 <input required type="password" name="Password">
                             </p>
                             <div class="login_submit">
-                                <a href="#">Quên mật khẩu?</a>
+                                <a href="javascript:void(0)" id="show-register">Chưa có tài khoản? Đăng ký</a>
                                 <label for="remember">
                                     <input id="remember" type="checkbox">
                                     Ghi nhớ
                                 </label>
                                 <button type="submit">Đăng nhập</button>
-
                             </div>
-
+                            <p>
+                            </p>
                         </form>
                     </div>
-                </div>
-                <!--login area start-->
-
-                <!--register area start-->
-                <div class="col-lg-6 col-md-6">
-                    <div class="account_form register">
+                    <!-- Register Form -->
+                    <div class="account_form register d-none" id="register-form">
                         <h2>Đăng ký</h2>
                         <form action="#">
                             <p>
@@ -66,14 +61,25 @@
                                 <input required type="password" name="Password">
                             </p>
                             <div class="login_submit">
+                                <a href="javascript:void(0)" id="show-login">Đã có tài khoản? Đăng nhập</a>
                                 <button type="submit">Đăng ký</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <!--register area end-->
             </div>
         </div>
     </div>
-    <!-- customer login end -->
+    
+    <script>
+        document.getElementById('show-register').addEventListener('click', function() {
+            document.getElementById('login-form').classList.add('d-none');
+            document.getElementById('register-form').classList.remove('d-none');
+        });
+        
+        document.getElementById('show-login').addEventListener('click', function() {
+            document.getElementById('register-form').classList.add('d-none');
+            document.getElementById('login-form').classList.remove('d-none');
+        });
+    </script>
 </main>
