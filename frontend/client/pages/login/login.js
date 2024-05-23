@@ -42,7 +42,7 @@ async function _authentication() {
             .then(data => {
                 if (data) {
                     alert('Đăng nhập thành công')
-                    location.reload()
+                    location.href='./'
                 } else {
                     alert('Tên tài khoản, mật khẩu không đúng!')
                 }
